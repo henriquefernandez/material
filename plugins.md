@@ -1,0 +1,3 @@
+- https://tingle.robinparisi.com/ - modal
+- https://flatpickr.js.org/ - flatpickr
+- https://github.com/basecamp/trix - trix 

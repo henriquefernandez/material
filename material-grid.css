@@ -1,0 +1,241 @@
+/* === @GRID === */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+.material-container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.material-r {
+  position: relative;
+  width: 100%;
+}
+
+.material-r .material-c1,
+.material-r .material-c2,
+.material-r .material-c3,
+.material-r .material-c4,
+.material-r .material-c5,
+.material-r .material-c6,
+.material-r .material-c7,
+.material-r .material-c8,
+.material-r .material-c9,
+.material-r .material-c10,
+.material-r .material-c11,
+.material-r .material-c12,
+.material-r .material-c1-md,
+.material-r .material-c2-md,
+.material-r .material-c3-md,
+.material-r .material-c4-md,
+.material-r .material-c5-md,
+.material-r .material-c6-md,
+.material-r .material-c7-md,
+.material-r .material-c8-md,
+.material-r .material-c9-md,
+.material-r .material-c10-md,
+.material-r .material-c11-md,
+.material-r .material-c12-md,
+.material-r .material-c1-sm,
+.material-r .material-c2-sm,
+.material-r .material-c3-sm,
+.material-r .material-c4-sm,
+.material-r .material-c5-sm,
+.material-r .material-c6-sm,
+.material-r .material-c7-sm,
+.material-r .material-c8-sm,
+.material-r .material-c9-sm,
+.material-r .material-c10-sm,
+.material-r .material-c11-sm,
+.material-r .material-c12-sm
+{
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.material-c1,
+.material-c2,
+.material-c3,
+.material-c4,
+.material-c5,
+.material-c6,
+.material-c7,
+.material-c8,
+.material-c9,
+.material-c10,
+.material-c11,
+.material-c12 {
+  width: 96%;
+}
+
+.material-c1-sm {
+  width: 4.33%;
+}
+
+.material-c2-sm {
+  width: 12.66%;
+}
+
+.material-c3-sm {
+  width: 21%;
+}
+
+.material-c4-sm {
+  width: 29.33%;
+}
+
+.material-c5-sm {
+  width: 37.66%;
+}
+
+.material-c6-sm {
+  width: 46%;
+}
+
+.material-c7-sm {
+  width: 54.33%;
+}
+
+.material-c8-sm {
+  width: 62.66%;
+}
+
+.material-c9-sm {
+  width: 71%;
+}
+
+.material-c10-sm {
+  width: 79.33%;
+}
+
+.material-c11-sm {
+  width: 87.66%;
+}
+
+.material-c12-sm {
+  width: 96%;
+}
+
+.material-r::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media only screen and (min-width: 53.75em) { /* MD */
+  .material-c1-md {
+    width: 4.33%;
+  }
+
+  .material-c2-md {
+    width: 12.66%;
+  }
+
+  .material-c3-md {
+    width: 21%;
+  }
+
+  .material-c4-md {
+    width: 29.33%;
+  }
+
+  .material-c5-md {
+    width: 37.66%;
+  }
+
+  .material-c6-md {
+    width: 46%;
+  }
+
+  .material-c7-md {
+    width: 54.33%;
+  }
+
+  .material-c8-md {
+    width: 62.66%;
+  }
+
+  .material-c9-md {
+    width: 71%;
+  }
+
+  .material-c10-md {
+    width: 79.33%;
+  }
+
+  .material-c11-md {
+    width: 87.66%;
+  }
+
+  .material-c12-md {
+    width: 96%;
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  .material-c1 {
+    width: 4.33%;
+  }
+
+  .material-c2 {
+    width: 12.66%;
+  }
+
+  .material-c3 {
+    width: 21%;
+  }
+
+  .material-c4 {
+    width: 29.33%;
+  }
+
+  .material-c5 {
+    width: 37.66%;
+  }
+
+  .material-c6 {
+    width: 46%;
+  }
+
+  .material-c7 {
+    width: 54.33%;
+  }
+
+  .material-c8 {
+    width: 62.66%;
+  }
+
+  .material-c9 {
+    width: 71%;
+  }
+
+  .material-c10 {
+    width: 79.33%;
+  }
+
+  .material-c11 {
+    width: 87.66%;
+  }
+
+  .material-c12 {
+    width: 96%;
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .material-container {
+    width: 90%;
+    max-width: 75rem;
+  }
+}

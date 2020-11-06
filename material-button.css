@@ -1,0 +1,492 @@
+/* === @BUTTON === */
+
+/* ====== BUTTON CONTAINED ====== */
+
+.material-button-contained {
+  position: relative;
+  margin-bottom: 1em;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  padding: 0 16px;
+  min-width: 64px;
+  text-decoration: none;
+  height: 38px;
+  vertical-align: middle;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: rgb(255, 255, 255);
+  background-color: rgb(65, 148, 255);
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 38px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.1s;
+  transition: -webkit-box-shadow 0.1s;
+  -o-transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+}
+.material-button-contained::-moz-focus-inner {
+  border: none;
+}
+/* Highlight, Ripple */
+.material-button-contained::before,
+.material-button-contained::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.material-button-contained::before {
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.material-button-contained::after {
+  background: -o-radial-gradient(center, circle, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  background: radial-gradient(circle at center, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  -webkit-transition: opacity 1s, background-size 0.1s;
+  -o-transition: opacity 1s, background-size 0.1s;
+  transition: opacity 1s, background-size 0.1s;
+}
+/* Hover, Focus */
+.material-button-contained:hover,
+.material-button-contained:focus {
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.material-button-contained:hover::before {
+  opacity: 0.08;
+}
+.material-button-contained:focus::before {
+  opacity: 0.24;
+}
+.material-button-contained:hover:focus::before {
+  opacity: 0.32;
+}
+/* Active */
+.material-button-contained:active {
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.material-button-contained:active::after {
+  opacity: 0.32;
+  background-size: 100% 100%;
+  -webkit-transition: background-size 0s;
+  -o-transition: background-size 0s;
+  transition: background-size 0s;
+}
+/* Disabled */
+.material-button-contained:disabled {
+  color: rgba(0,0,0, 0.38);
+  background-color: rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: initial;
+}
+.material-button-contained:disabled::before,
+.material-button-contained:disabled::after {
+  opacity: 0;
+}
+
+/* ====== BUTTON UNELEVATED ====== */
+.material-button-unelevated {
+  --m-helper-theme: var(--m-theme-rgb, var(--m-primary-rgb, 33, 150, 243));
+  --m-helper-ontheme: var(--m-ontheme-rgb, var(--m-onprimary-rgb, 255, 255, 255));
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  padding: 0 16px;
+  min-width: 64px;
+  height: 38px;
+  vertical-align: middle;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: rgb(255, 255, 255);
+  background-color: rgb(35, 150, 243);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 38px;
+  outline: none;
+  cursor: pointer;
+}
+.material-button-unelevated::-moz-focus-inner {
+  border: none;
+}
+/* Highlight, Ripple */
+.material-button-unelevated::before,
+.material-button-unelevated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+}
+.material-button-unelevated::before {
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.material-button-unelevated::after {
+  background: -o-radial-gradient(center, circle, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  background: radial-gradient(circle at center, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  -webkit-transition: opacity 1s, background-size 0.1s;
+  -o-transition: opacity 1s, background-size 0.1s;
+  transition: opacity 1s, background-size 0.1s;
+}
+/* Hover, Focus */
+.material-button-unelevated:hover::before {
+  opacity: 0.08;
+}
+.material-button-unelevated:focus::before {
+  opacity: 0.24;
+}
+.material-button-unelevated:hover:focus::before {
+  opacity: 0.32;
+}
+/* Active */
+.material-button-unelevated:active::after {
+  opacity: 0.32;
+  background-size: 100% 100%;
+  -webkit-transition: background-size 0s;
+  -o-transition: background-size 0s;
+  transition: background-size 0s;
+}
+/* Disabled */
+.material-button-unelevated:disabled {
+  color: rgba(0,0,0, 0.38);
+  background-color: rgba(0,0,0, 0.12);
+  cursor: initial;
+}
+.material-button-unelevated:disabled::before,
+.material-button-unelevated:disabled::after {
+  opacity: 0;
+}
+
+/* ====== BUTTON OUTLINED ====== */
+.material-button-outlined {
+  --m-helper-theme: var(--m-theme-rgb, var(--m-primary-rgb, 33, 150, 243));
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 1em;
+  border: solid 1px; /* Safari */
+  border-color: rgba(0,0,0, 0.24);
+  text-decoration: none;
+  padding: 0 16px;
+  min-width: 64px;
+  height: 38px;
+  vertical-align: middle;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: rgb(65, 148, 255);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 34px;
+  outline: none;
+  cursor: pointer;
+}
+.material-button-outlined::-moz-focus-inner {
+  border: none;
+}
+/* Highlight, Ripple */
+.material-button-outlined::before,
+.material-button-outlined::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.material-button-outlined::before {
+  background-color: rgb(65, 148, 255);
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.material-button-outlined::after {
+  background: -o-radial-gradient(center, circle, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  background: radial-gradient(circle at center, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  -webkit-transition: opacity 1s, background-size 0.1s;
+  -o-transition: opacity 1s, background-size 0.1s;
+  transition: opacity 1s, background-size 0.1s;
+}
+/* Hover, Focus */
+.material-button-outlined:hover::before {
+  opacity: 0.04;
+}
+.material-button-outlined:focus::before {
+  opacity: 0.12;
+}
+.material-button-outlined:hover:focus::before {
+  opacity: 0.16;
+}
+/* Active */
+.material-button-outlined:active::after {
+  opacity: 0.16;
+  background-size: 100% 100%;
+  -webkit-transition: background-size 0s;
+  -o-transition: background-size 0s;
+  transition: background-size 0s;
+}
+/* Disabled */
+.material-button-outlined:disabled {
+  color: rgba(0,0,0, 0.38);
+  background-color: transparent;
+  cursor: initial;
+}
+.material-button-outlined:disabled::before,
+.material-button-outlined:disabled::after {
+  opacity: 0;
+}
+/* Button Text */
+.material-button-text {
+  --m-helper-theme: var(--m-theme-rgb, var(--m-primary-rgb, 33, 150, 243));
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 1em;
+  border: none;
+  padding: 0 8px;
+  min-width: 64px;
+  height: 38px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: rgb(65, 148, 255);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 38px;
+  outline: none;
+  cursor: pointer;
+}
+.material-button-text::-moz-focus-inner {
+  border: none;
+}
+/* Highlight, Ripple */
+.material-button-text::before,
+.material-button-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+}
+.material-button-text::before {
+  background-color: rgb(65, 148, 255);
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.material-button-text::after {
+  background: -o-radial-gradient(center, circle, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  background: radial-gradient(circle at center, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  -webkit-transition: opacity 1s, background-size 0.1s;
+  -o-transition: opacity 1s, background-size 0.1s;
+  transition: opacity 1s, background-size 0.1s;
+}
+/* Hover, Focus */
+.material-button-text:hover::before {
+  opacity: 0.04;
+}
+.material-button-text:focus::before {
+  opacity: 0.12;
+}
+.material-button-text:hover:focus::before {
+  opacity: 0.16;
+}
+/* Active */
+.material-button-text:active::after {
+  opacity: 0.16;
+  background-size: 100% 100%;
+  -webkit-transition: background-size 0s;
+  -o-transition: background-size 0s;
+  transition: background-size 0s;
+}
+/* Disabled */
+.material-button-text:disabled {
+  color: rgba(0,0,0, 0.38);
+  background-color: transparent;
+  cursor: initial;
+}
+.material-button-text:disabled::before,
+.material-button-text:disabled::after {
+  opacity: 0;
+}
+
+/* ====== BUTTON FAB ====== */
+
+.material-fab, .material-fab-lg {
+  border-radius: 50%;
+  min-width: 0;
+  width: 39px;
+  height: 39px;
+  font-size: 27px;
+  padding: 0px 0px 1px 0px;
+}
+
+.material-fab-lg {
+  width: 55px;
+  height: 55px;
+}
+
+.material-fab .material-icons, .material-fab-lg .material-icons {
+  position: relative;
+  top: 2px;
+  margin: 0;
+}
+
+/* ====== BUTTON GROUP ====== */
+
+.material-button-group {
+  margin-bottom: 1em;
+  width: max-content;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.material-button-group.material-unelevated {
+  box-shadow: none;
+}
+
+.material-button-group button {
+  color: white;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: inherit;
+  text-decoration: none;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  border: none;
+  cursor: pointer;
+  height: 38px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 38px;
+  vertical-align: middle;
+  text-align: center;
+  outline: none;
+  -webkit-transition: -webkit-box-shadow 0.1s;
+  transition: -webkit-box-shadow 0.1s;
+  -o-transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+}
+
+.material-button-group.material-rounded button:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+.material-button-group.material-rounded button:last-child {
+  border-radius: 0 7px 7px 0;
+}
+
+.material-button-group.material-rounded-gg button:first-child {
+  border-radius: 24px 0 0 24px;
+}
+
+.material-button-group.material-rounded-gg button:last-child {
+  border-radius: 0 24px 24px 0;
+}
+
+.material-button-group button:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+  transition: 0.1s;
+}
+
+.material-button-group.material-3d button {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.material-button-group.material-3d button:active {
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight, Ripple */
+.material-button-group button::before,
+.material-button-group button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+}
+.material-button-group button::before {
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.material-button-group button::after {
+  background: -o-radial-gradient(center, circle, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  background: radial-gradient(circle at center, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+  -webkit-transition: opacity 1s, background-size 0.1s;
+  -o-transition: opacity 1s, background-size 0.1s;
+  transition: opacity 1s, background-size 0.1s;
+}
+/* Hover, Focus */
+.material-button-group button::before {
+  opacity: 0.04;
+}
+.material-button-group button::before {
+  opacity: 0.12;
+}
+.material-button-group button:hover:focus::before {
+  opacity: 0.16;
+}
+/* Active */
+.material-button-group button:active::after {
+  opacity: 0.32;
+  background-size: 100% 100%;
+  -webkit-transition: background-size 0s;
+  -o-transition: background-size 0s;
+  transition: background-size 0s;
+}
+
+/* ====== GENERAL ====== */
+
+button .material-icons {
+  position: relative;
+  top: 6px;
+  font-size: 22px;
+  margin-right: 2px;
+}

@@ -1,0 +1,70 @@
+/* === @COLORS === */
+
+.material-primary {
+  background-color: rgb(33, 150, 243);
+}
+
+.material-black {
+  background-color: black;
+}
+
+.material-white {
+  background-color: white !important;
+}
+
+.material-secondary {
+  background-color: rgb(102, 0, 238);
+}
+
+.material-error {
+  background-color: rgb(238, 0, 0);
+}
+
+.material-warning {
+  background-color: rgb(238, 102, 0);
+}
+
+.material-success {
+  background-color: rgb(17, 136, 34);
+}
+
+/* Text */
+.material-primary-text,
+.material-primary-text button
+{
+  color: rgb(33, 150, 243);
+}
+
+.material-secondary-text,
+.material-secondary-text button
+{
+  color: rgb(102, 0, 238);
+}
+
+.material-error-text,
+.material-error-text button
+{
+  color: rgb(8, 0, 0);
+}
+
+.material-warning-text,
+.material-warning-text button
+{
+  color: rgb(238, 102, 0);
+}
+
+.material-success-text,
+.material-success-text button
+{
+  color: rgb(17, 136, 34);
+}
+
+.material-black-text,
+.material-black-text button
+{
+  color: rgba(0,0,0,.84) !important;
+}
+
+.material-glossy {
+  background-image: linear-gradient(180deg,hsla(0,0%,100%,0.3),hsla(0,0%,100%,0) 50%,rgba(0,0,0,0.12) 51%,rgba(0,0,0,0.04));
+}

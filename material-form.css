@@ -1,0 +1,1051 @@
+/* === @FORM === */
+
+/* ===== SELECT ===== */
+
+.material-select {
+  position: relative;
+  width: 276px;
+  margin-top: 19px;
+}
+
+.material-select-text {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  position: relative;
+  background-color: whitesmoke;
+  width: 276px;
+  padding: 26px 10px 10px 11px;
+  border-radius: 0;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.87);
+  cursor: pointer;
+}
+
+.material-select-text:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(0,0,0, 0);
+}
+
+.material-select-text:hover {
+  background-color: rgba(0,0,0,0.08);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.material-select-text:hover:not(:focus) {
+  border-bottom-color: rgba(0,0,0,0.87);
+}
+
+.material-select .material-select-text {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance:none
+}
+
+.material-select:after {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgb(98 98 98 / 35%);
+  pointer-events: none;
+}
+
+.material-select-label {
+  color: #636363;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 21px;
+  -webkit-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  font-size: 16px;
+}
+
+.material-select-text:focus ~ .material-select-label {
+  color: #2196f3;
+}
+
+.material-select-text:focus ~ .material-select-label, .material-select-text:valid ~ .material-select-label {
+  top: 7px;
+  left: 12px;
+  -webkit-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  font-size: 12px;
+}
+
+.material-select-bar {
+  position: relative;
+  display: block;
+  width: 276px;
+}
+
+.material-select-bar:before, .material-select-bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #2196f3;
+  -webkit-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.material-select-bar:before {
+  left: 50%;
+}
+
+.material-select-bar:after {
+  right: 50%;
+}
+
+.material-select-text:focus ~ .material-select-bar:before, .material-select-text:focus ~ .material-select-bar:after {
+  width: 50%;
+}
+
+.material-select-highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@supports (-moz-appearance:none) {
+  .material-active-underline { height: 46px; }
+  .material-select-text {padding-left: 7px;}
+}
+
+
+/* ===== CHECKBOX ===== */
+
+/* Checkbox */
+.material-checkbox {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: rgba(0,0,0, 0.87);
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Box */
+.material-checkbox > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 3px 1px;
+  border: solid 2px; /* Safari */
+  border-color: rgba(0,0,0, 0.6);
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s, background-color 0.2s;
+  -o-transition: border-color 0.2s, background-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+/* Span */
+.material-checkbox > input + span {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+  width: inherit;
+  cursor: pointer;
+}
+/* Highlight */
+.material-checkbox > input + span::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.2s;
+  transition: opacity 0.3s, -webkit-transform 0.2s;
+  -o-transition: opacity 0.3s, transform 0.2s;
+  transition: opacity 0.3s, transform 0.2s;
+  transition: opacity 0.3s, transform 0.2s, -webkit-transform 0.2s;
+}
+/* Check Mark */
+.material-checkbox > input + span::after {
+  content: "";
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 10px;
+  height: 5px;
+  border: solid 2px transparent;
+  border-right-width: 0;
+  border-top-width: 0;
+  pointer-events: none;
+  -webkit-transform: translate(3px, 4px) rotate(-45deg);
+  -ms-transform: translate(3px, 4px) rotate(-45deg);
+  transform: translate(3px, 4px) rotate(-45deg);
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+/* Checked, Indeterminate */
+.material-checkbox > input:checked,
+.material-checkbox > input:indeterminate {
+  border-color: rgb(33, 150, 243);
+  background-color: rgb(33, 150, 243);
+}
+.material-checkbox > input:checked + span::before,
+.material-checkbox > input:indeterminate + span::before {
+  background-color: rgb(33, 150, 243);
+}
+.material-checkbox > input:checked + span::after,
+.material-checkbox > input:indeterminate + span::after {
+  border-color: rgb(255, 255, 255);
+}
+.material-checkbox > input:indeterminate + span::after {
+  border-left-width: 0;
+  -webkit-transform: translate(4px, 3px);
+  -ms-transform: translate(4px, 3px);
+  transform: translate(4px, 3px);
+}
+/* Hover, Focus */
+.material-checkbox:hover > input + span::before {
+  opacity: 0.04;
+}
+.material-checkbox > input:focus + span::before {
+  opacity: 0.12;
+}
+.material-checkbox:hover > input:focus + span::before {
+  opacity: 0.16;
+}
+/* Active */
+.material-checkbox:active > input,
+.material-checkbox:active:hover > input {
+  border-color: rgb(33, 150, 243);
+}
+.material-checkbox:active > input:checked {
+  border-color: transparent;
+  background-color: rgba(0,0,0, 0.6);
+}
+.material-checkbox:active > input + span::before {
+  opacity: 1;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, -webkit-transform 0s;
+  -o-transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s, -webkit-transform 0s;
+}
+/* Disabled */
+.material-checkbox > input:disabled {
+  border-color: rgba(0,0,0, 0.38);
+  cursor: initial;
+}
+.material-checkbox > input:checked:disabled,
+.material-checkbox > input:indeterminate:disabled {
+  border-color: transparent;
+  background-color: rgba(0,0,0, 0.38);
+}
+.material-checkbox > input:disabled + span {
+  color: rgba(0,0,0, 0.38);
+  cursor: initial;
+}
+.material-checkbox > input:disabled + span::before {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+/* ===== RADIO ===== */
+/* Radio */
+.material-radio {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: rgba(0,0,0, 0.87);
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Circle */
+.material-radio > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 2px 0;
+  border: solid 2px; /* Safari */
+  border-color: rgba(0,0,0, 0.6);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+/* Span */
+.material-radio > input + span {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+  width: inherit;
+  cursor: pointer;
+}
+/* Highlight */
+.material-radio > input + span::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.2s;
+  transition: opacity 0.3s, -webkit-transform 0.2s;
+  -o-transition: opacity 0.3s, transform 0.2s;
+  transition: opacity 0.3s, transform 0.2s;
+  transition: opacity 0.3s, transform 0.2s, -webkit-transform 0.2s;
+}
+/* Check Mark */
+.material-radio > input + span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(33, 150, 243);
+  -webkit-transform: translate(5px, 5px) scale(0);
+  -ms-transform: translate(5px, 5px) scale(0);
+  transform: translate(5px, 5px) scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+/* Checked */
+.material-radio > input:checked {
+  border-color: rgb(33, 150, 243);
+}
+.material-radio > input:checked + span::before {
+  background-color: rgb(33, 150, 243);
+}
+.material-radio > input:checked + span::after {
+  -webkit-transform: translate(5px, 5px) scale(1);
+  -ms-transform: translate(5px, 5px) scale(1);
+  transform: translate(5px, 5px) scale(1);
+}
+/* Hover, Focus */
+.material-radio:hover > input + span::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 0.04;
+}
+.material-radio > input:focus + span::before  {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 0.12;
+}
+.material-radio:hover > input:focus + span::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 0.16;
+}
+/* Active */
+.material-radio:active > input {
+  border-color: rgb(33, 150, 243);
+}
+.material-radio:active > input + span::before,
+.material-radio:active:hover > input + span::before {
+  opacity: 1;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, -webkit-transform 0s;
+  -o-transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s, -webkit-transform 0s;
+}
+/* Disabled */
+.material-radio > input:disabled {
+  border-color: rgba(0,0,0, 0.38);
+  cursor: initial;
+}
+.material-radio > input:disabled + span {
+  color: rgba(0,0,0, 0.38);
+  cursor: initial;
+}
+.material-radio > input:disabled + span::before {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+.material-radio > input:disabled + span::after {
+  background-color: currentColor;
+}
+
+/* ===== SWITCH ===== */
+
+/* Switch */
+.material-switch {
+  z-index: 0;
+  position: relative;
+  display: inline-block;
+  color: rgba(0,0,0, 0.87);
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Track */
+.material-switch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: 1;
+  position: relative;
+  float: right;
+  display: inline-block;
+  margin: 0 0 0 5px;
+  border: solid 5px transparent;
+  border-radius: 12px;
+  width: 46px;
+  height: 24px;
+  background-clip: padding-box;
+  background-color: rgba(0,0,0, 0.38);
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s, opacity 0.2s;
+  -o-transition: background-color 0.2s, opacity 0.2s;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+/* Span */
+.material-switch > input + span {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: -51px;
+  padding-right: 51px;
+  width: inherit;
+  cursor: pointer;
+}
+/* Highlight */
+.material-switch > input + span::before {
+  content: "";
+  position: absolute;
+  right: 11px;
+  top: -8px;
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s 0.1s, -webkit-transform 0.2s 0.1s;
+  transition: opacity 0.3s 0.1s, -webkit-transform 0.2s 0.1s;
+  -o-transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+}
+/* Thumb */
+.material-switch > input + span::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  right: 21px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+  -webkit-transition: background-color 0.2s, -webkit-transform 0.2s;
+  transition: background-color 0.2s, -webkit-transform 0.2s;
+  -o-transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+}
+/* Checked */
+.material-switch > input:checked {
+  background-color: rgba(33, 150, 243, 0.6);
+}
+.material-switch > input:checked + span::before {
+  right: -5px;
+  background-color: rgb(33, 150, 243);
+}
+.material-switch > input:checked + span::after {
+  background-color: rgb(33, 150, 243);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+/* Hover, Focus */
+.material-switch:hover > input + span::before {
+  opacity: 0.04;
+}
+.material-switch > input:focus + span::before {
+  opacity: 0.12;
+}
+.material-switch:hover > input:focus + span::before {
+  opacity: 0.16;
+}
+/* Active */
+.material-switch:active > input {
+  background-color: rgba(33, 150, 243, 0.6);
+}
+.material-switch:active > input:checked {
+  background-color: rgba(0,0,0, 0.38);
+}
+.material-switch:active > input + span::before {
+  opacity: 1;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, -webkit-transform 0s;
+  -o-transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s, -webkit-transform 0s;
+}
+/* Disabled */
+.material-switch > input:disabled {
+  background-color: rgba(0,0,0, 0.38);
+  opacity: 0.38;
+  cursor: default;
+}
+.material-switch > input:checked:disabled {
+  background-color: rgba(33, 150, 243, 0.6);
+}
+.material-switch > input:disabled + span {
+  color: rgba(0, 0, 0, 0.38);
+  cursor: default;
+}
+.material-switch > input:disabled + span::before {
+  z-index: 1;
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.material-switch > input:disabled + span::after {
+  opacity: 0.38;
+}
+
+/* ===== TEXTFIELD STANDARD ===== */
+/* Textfield Standard */
+.material-textfield-standard {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Input, Textarea */
+.material-textfield-standard > input,
+.material-textfield-standard > textarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  border-top: solid 24px transparent;
+  border-bottom: solid 1px rgba(0,0,0, 0.6);
+  padding: 0 0 7px;
+  width: 100%;
+  height: inherit;
+  color: rgba(0,0,0, 0.87);
+  -webkit-text-fill-color: currentColor; /* Safari */
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none; /* Firefox */
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: rgb(33, 150, 243);
+  -webkit-transition: border-bottom 0.2s, background-color 0.2s;
+  -o-transition: border-bottom 0.2s, background-color 0.2s;
+  transition: border-bottom 0.2s, background-color 0.2s;
+}
+/* Span */
+.material-textfield-standard > input + span,
+.material-textfield-standard > textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 7px 0 0;
+  color: rgba(0,0,0, 0.6);
+  font-size: 75%;
+  line-height: 18px;
+  pointer-events: none;
+  -webkit-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+/* Underline */
+.material-textfield-standard > input + span::after,
+.material-textfield-standard > textarea + span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(33, 150, 243);
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+/* Hover */
+.material-textfield-standard:hover > input,
+.material-textfield-standard:hover > textarea {
+  border-bottom-color: rgba(0,0,0, 0.87);
+}
+/* Placeholder-shown */
+.material-textfield-standard > input:not(:focus):placeholder-shown + span,
+.material-textfield-standard > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 56px;
+}
+/* Focus */
+.material-textfield-standard > input:focus,
+.material-textfield-standard > textarea:focus {
+  outline: none;
+}
+.material-textfield-standard > input:focus + span,
+.material-textfield-standard > textarea:focus + span {
+  color: rgb(33, 150, 243);
+}
+.material-textfield-standard > input:focus + span::after,
+.material-textfield-standard > textarea:focus + span::after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/* Disabled */
+.material-textfield-standard > input:disabled,
+.material-textfield-standard > textarea:disabled {
+  border-bottom-color: rgba(0,0,0,0.38);
+  color: rgba(0,0,0, 0.38);
+}
+.material-textfield-standard > input:disabled + span,
+.material-textfield-standard > textarea:disabled + span {
+  color: rgba(0,0,0, 0.38);
+}
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .material-textfield-standard > input,
+    .material-textfield-standard > input + span,
+    .material-textfield-standard > input + span::after,
+    .material-textfield-standard > textarea,
+    .material-textfield-standard > textarea + span,
+    .material-textfield-standard > textarea + span::after {
+      -webkit-transition-duration: 0.1s;
+      -o-transition-duration: 0.1s;
+      transition-duration: 0.1s;
+    }
+  }
+}
+
+/* ===== TEXTFIELD FILLED ===== */
+/* Textfield Filled */
+.material-textfield-filled {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Input, Textarea */
+.material-textfield-filled > input,
+.material-textfield-filled > textarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  border-top: solid 24px transparent;
+  border-bottom: solid 1px rgba(0,0,0, 0.6);
+  border-radius: 4px 4px 0 0;
+  padding: 0 12px 7px;
+  width: 100%;
+  height: inherit;
+  color: rgba(0,0,0, 0.87);
+  -webkit-text-fill-color: currentColor; /* Safari */
+  background-color: rgba(0,0,0, 0.04);
+  -webkit-box-shadow: none;
+  box-shadow: none; /* Firefox */
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: rgb(33, 150, 243);
+  -webkit-transition: border-bottom 0.2s, background-color 0.2s;
+  -o-transition: border-bottom 0.2s, background-color 0.2s;
+  transition: border-bottom 0.2s, background-color 0.2s;
+}
+/* Span */
+.material-textfield-filled > input + span,
+.material-textfield-filled > textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 7px 12px 0;
+  color: rgba(0,0,0, 0.6);
+  font-size: 75%;
+  line-height: 18px;
+  pointer-events: none;
+  -webkit-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+/* Underline */
+.material-textfield-filled > input + span::after,
+.material-textfield-filled > textarea + span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(33, 150, 243);
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+/* Hover */
+.material-textfield-filled:hover > input,
+.material-textfield-filled:hover > textarea {
+  border-bottom-color: rgba(0,0,0, 0.87);
+  background-color: rgba(0,0,0, 0.08);
+}
+/* Placeholder-shown */
+.material-textfield-filled > input:not(:focus):placeholder-shown + span,
+.material-textfield-filled > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 48px;
+}
+/* Focus */
+.material-textfield-filled > input:focus,
+.material-textfield-filled > textarea:focus {
+  outline: none;
+}
+.material-textfield-filled > input:focus + span,
+.material-textfield-filled > textarea:focus + span {
+  color: rgb(33, 150, 243);
+}
+.material-textfield-filled > input:focus + span::after,
+.material-textfield-filled > textarea:focus + span::after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/* Disabled */
+.material-textfield-filled > input:disabled,
+.material-textfield-filled > textarea:disabled {
+  border-bottom-color: rgba(0,0,0, 0.38);
+  color: rgba(0,0,0, 0.38);
+  background-color: rgba(0,0,0, 0.24);
+}
+.material-textfield-filled > input:disabled + span,
+.material-textfield-filled > textarea:disabled + span {
+  color: rgba(0,0,0, 0.38);
+}
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .material-textfield-filled > input,
+    .material-textfield-filled > input + span,
+    .material-textfield-filled > input + span::after,
+    .material-textfield-filled > textarea,
+    .material-textfield-filled > textarea + span,
+    .material-textfield-filled > textarea + span::after {
+      -webkit-transition-duration: 0.1s;
+      -o-transition-duration: 0.1s;
+      transition-duration: 0.1s;
+    }
+  }
+}
+
+/* ===== TEXTFIELD OUTLINED ===== */
+/* Textfield Outlined */
+.material-textfield-outlined {
+  --m-helper-safari1: rgba(0,0,0, 0.38);
+  --m-helper-safari2: rgba(0,0,0, 0.6);
+  --m-helper-safari3: rgba(0,0,0, 0.87);
+  position: relative;
+  display: inline-block;
+  padding-top: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Input, Textarea */
+.material-textfield-outlined > input,
+.material-textfield-outlined > textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent var(--m-helper-safari2) var(--m-helper-safari2);
+  border-radius: 4px;
+  padding: 15px 13px 15px;
+  width: 100%;
+  height: inherit;
+  color: rgba(0,0,0, 0.87);
+  -webkit-text-fill-color: currentColor; /* Safari */
+  background-color: transparent;
+  -webkit-box-shadow: inset 1px 0 transparent, inset -1px 0 transparent, inset 0 -1px transparent;
+  box-shadow: inset 1px 0 transparent, inset -1px 0 transparent, inset 0 -1px transparent;
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: rgb(33,150,243);
+  -webkit-transition: border 0.2s, box-shadow 0.2s;
+  -webkit-transition: border 0.2s, -webkit-box-shadow 0.2s;
+  transition: border 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: border 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.material-textfield-outlined > input:not(:focus):placeholder-shown,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown {
+  border-top-color: var(--m-helper-safari2);
+}
+/* Span */
+.material-textfield-outlined > input + span,
+.material-textfield-outlined > textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  max-height: 100%;
+  color: rgba(0,0,0, 0.6);
+  width: 100%;
+  font-size: 75%;
+  line-height: 15px;
+  cursor: text;
+  -webkit-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+.material-textfield-outlined > input:not(:focus):placeholder-shown + span,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 68px;
+}
+/* Corners */
+.material-textfield-outlined > input + span::before,
+.material-textfield-outlined > input + span::after,
+.material-textfield-outlined > textarea + span::before,
+.material-textfield-outlined > textarea + span::after {
+  content: "";
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 6px;
+  border-top: solid 1px var(--m-helper-safari2);
+  min-width: 10px;
+  height: 8px;
+  pointer-events: none;
+  -webkit-box-shadow: inset 0 1px transparent;
+  box-shadow: inset 0 1px transparent;
+  -webkit-transition: border 0.2s, box-shadow 0.2s;
+  -webkit-transition: border 0.2s, -webkit-box-shadow 0.2s;
+  transition: border 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: border 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.material-textfield-outlined > input + span::before,
+.material-textfield-outlined > textarea + span::before {
+  margin-right: 4px;
+  border-left: solid 1px transparent;
+  border-radius: 4px 0;
+}
+.material-textfield-outlined > input + span::after,
+.material-textfield-outlined > textarea + span::after {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 4px;
+  border-right: solid 1px transparent;
+  border-radius: 0 4px;
+}
+.material-textfield-outlined > input:not(:focus):placeholder-shown + span::before,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::before,
+.material-textfield-outlined > input:not(:focus):placeholder-shown + span::after,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::after {
+  border-top-color: transparent;
+}
+/* Hover */
+.material-textfield-outlined:hover > input,
+.material-textfield-outlined:hover > textarea {
+  border-color: transparent var(--m-helper-safari3) var(--m-helper-safari3);
+}
+.material-textfield-outlined:hover > input + span::before,
+.material-textfield-outlined:hover > textarea + span::before,
+.material-textfield-outlined:hover > input + span::after,
+.material-textfield-outlined:hover > textarea + span::after {
+  border-top-color: var(--m-helper-safari3);
+}
+.material-textfield-outlined:hover > input:not(:focus):placeholder-shown,
+.material-textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
+  border-color: var(--m-helper-safari3);
+}
+/* Focus */
+.material-textfield-outlined > input:focus,
+.material-textfield-outlined > textarea:focus {
+  border-color: transparent rgb(33,150,243) rgb(33,150,243);
+  -webkit-box-shadow: inset 1px 0 rgb(33,150,243), inset -1px 0 rgb(33,150,243), inset 0 -1px rgb(33,150,243);
+  box-shadow: inset 1px 0 rgb(33,150,243), inset -1px 0 rgb(33,150,243), inset 0 -1px rgb(33,150,243);
+  outline: none;
+}
+.material-textfield-outlined > input:focus + span,
+.material-textfield-outlined > textarea:focus + span {
+  color: rgb(33,150,243);
+}
+.material-textfield-outlined > input:focus + span::before,
+.material-textfield-outlined > input:focus + span::after,
+.material-textfield-outlined > textarea:focus + span::before,
+.material-textfield-outlined > textarea:focus + span::after {
+  border-top-color: rgb(33,150,243) !important;
+  -webkit-box-shadow: inset 0 1px rgb(33,150,243);
+  box-shadow: inset 0 1px rgb(33,150,243);
+}
+/* Disabled */
+.material-textfield-outlined > input:disabled,
+.material-textfield-outlined > input:disabled + span,
+.material-textfield-outlined > textarea:disabled,
+.material-textfield-outlined > textarea:disabled + span {
+  border-color: transparent var(--m-helper-safari1) var(--m-helper-safari1) !important;
+  color: rgba(0,0,0, 0.38);
+  pointer-events: none;
+}
+.material-textfield-outlined > input:disabled + span::before,
+.material-textfield-outlined > input:disabled + span::after,
+.material-textfield-outlined > textarea:disabled + span::before,
+.material-textfield-outlined > textarea:disabled + span::after {
+  border-top-color: var(--m-helper-safari1) !important;
+}
+.material-textfield-outlined > input:disabled:placeholder-shown,
+.material-textfield-outlined > input:disabled:placeholder-shown + span,
+.material-textfield-outlined > textarea:disabled:placeholder-shown,
+.material-textfield-outlined > textarea:disabled:placeholder-shown + span {
+  border-top-color: var(--m-helper-safari1) !important;
+}
+.material-textfield-outlined > input:disabled:placeholder-shown + span::before,
+.material-textfield-outlined > input:disabled:placeholder-shown + span::after,
+.material-textfield-outlined > textarea:disabled:placeholder-shown + span::before,
+.material-textfield-outlined > textarea:disabled:placeholder-shown + span::after {
+  border-top-color: transparent !important;
+}
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .material-textfield-outlined > input,
+    .material-textfield-outlined > input + span,
+    .material-textfield-outlined > textarea,
+    .material-textfield-outlined > textarea + span,
+    .material-textfield-outlined > input + span::before,
+    .material-textfield-outlined > input + span::after,
+    .material-textfield-outlined > textarea + span::before,
+    .material-textfield-outlined > textarea + span::after {
+      -webkit-transition-duration: 0.1s;
+      -o-transition-duration: 0.1s;
+      transition-duration: 0.1s;
+    }
+  }
+}

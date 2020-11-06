@@ -1,0 +1,45 @@
+/* === @ALERT === */
+
+.material-alert-wrap {
+  position: relative;
+  margin-bottom: 1em;
+  background-color: #f9f9f9;
+}
+.material-alert {
+  padding: 0.1em 0.1em 0.1em 1em;
+}
+.material-alert-wrap.material-info {
+  color: #063860;
+  background-color: #bedff9;
+}
+.material-alert-wrap.material-error {
+  color: #7f231c;
+  background-color: #fdd9d7;
+}
+.material-alert-wrap.material-warning {
+  color: #974100;
+  background-color: #ffdec5;
+}
+.material-alert-wrap.material-success {
+  color: #285b2a;
+  background-color: #dbefdc;
+}
+.material-alert-close {
+  display: block;
+  float: right;
+}
+#material-alert-check {
+  display: none;
+}
+#material-alert-check:checked ~ div, #material-alert-check:checked ~ label {
+  display: none;
+}
+#material-alert-check + label {
+  float: right;
+  display: block;
+  cursor: pointer;
+  margin: 1em;
+  font-size: 18px;
+  font-weight: bold;
+}
+

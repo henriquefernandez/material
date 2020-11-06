@@ -1,0 +1,48 @@
+/* === @CARD === */
+
+.material-card-flex, .material-card {
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.material-card {
+  max-width: 370px;
+}
+
+.material-card-flex {
+  max-width: 694px;
+}
+
+.material-card-media, .material-card-background-cover {
+  width: 100%;
+}
+
+.material-card-background-cover {
+  background-size: cover;
+  background-position: center center;
+  height: 196px;
+}
+
+.material-card-details {
+  padding: 0.333em 1em 1em;
+}
+
+.material-card-head,
+.material-card-head.material-min-height {
+  font-weight: 400;
+  font-size: 26px;
+  margin: 1em 0em;
+  color: rgba(0,0,0,.84);
+}
+
+.material-card-head.material-min-height {
+  min-height: 88px;
+}
+
+p.material-card-resume {
+  min-height: 77px;
+}
+
+.material-card-date {
+  font-style: italic
+}

@@ -1,0 +1,136 @@
+<html class-"no-js">
+  <head>
+    <title>Dashboard (material)</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Insira aqui a descrição da página.">
+    <!-- @STYLES -->
+    <!-- Mate -->
+    <link rel="stylesheet" href="../material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material Icons -->
+    <style>
+      pre{
+        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+        margin-bottom: 10px;
+        overflow: auto;
+        width: auto;
+        padding: 1em;
+        background-color: #eee;
+        width: 650px!ie7;
+        padding-bottom: 20px!ie7;
+        max-height: 600px;
+      }
+    </style>
+    <!-- @FLATPICKER -->
+    <link rel="stylesheet" href="../plugins/flatpickr.min.css"/>
+    <script src="../plugins/flatpickr.min.js"></script>
+  </head>
+  <body>
+    <!-- Checkbox Markup; Class: m-checkbox -->
+    <label class="material-checkbox">
+      <input type="checkbox">
+      <span>Checkbox</span>
+    </label>
+    <hr>
+
+    <!-- Radio Markup; Class: m-radio -->
+    <label class="material-radio">
+      <input type="radio" name="group">
+      <span>Radio</span>
+    </label>
+    <hr>
+
+    <!-- Switch Markup; Class: m-switch -->
+    <label class="material-switch">
+      <input type="checkbox" role="switch">
+      <span>Switch</span>
+    </label>
+    <hr>
+
+    <!-- Textfield Markup with <input> (Keep the placeholder attribute as it is!); -->
+    <!-- Classes: m-textfield-filled, m-textfield-outlined, m-textfield-standard -->
+    <label class="material-textfield-filled">
+      <input placeholder=" "/>
+      <span>Textfield</span>
+    </label>
+    <hr>
+
+    <!-- Textfield Markup with <input> (Keep the placeholder attribute as it is!); -->
+    <!-- Classes: m-textfield-filled, m-textfield-outlined, m-textfield-standard -->
+    <label class="material-textfield-filled">
+      <input type=number placeholder=" "/>
+      <span>Number</span>
+    </label>
+
+    <hr>
+    <!-- @FLATPICKER -->
+    Using flatpicker, that can be used only for time too https://flatpickr.js.org/examples/ and has a .destroy() method to use with turbolinks
+
+    <br>
+    <br>
+    <label class="material-textfield-filled">
+      <input id="flatpickr-input" placeholder=" "/>
+      <span>Datefield</span>
+    </label>
+    <hr>
+
+    <div class="material-select">
+      <select class="material-select-text" required>
+        <option value="" disabled selected></option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <span class="material-select-highlight"></span>
+      <span class="material-select-bar"></span>
+      <label class="material-select-label">Select</label>
+    </div>
+
+    <hr>
+
+
+    <!-- Textfield Markup with <textarea> (Keep the placeholder attribute as it is!); -->
+    <!-- Classes: m-textfield-filled, m-textfield-outlined, m-textfield-standard -->
+    <label class="material-textfield-filled">
+      <textarea placeholder=" "></textarea>
+      <span>Textfield</span>
+    </label>
+    <hr>
+
+    <!-- Tooltip Markup; Classes: m-tooltip, m-tooltip-top -->
+    <!--<span class="material-tooltip"><span id="tooltip-id" aria-hidden="true">Tooltip</span></span>-->
+
+    <!-- Put as first child of originating component -->
+    <!-- Use unique id on inner span of tooltip, refer it with aria-describedby in originating component -->
+    <label class="material-textfield-outlined">
+      <span class="material-tooltip"><span id="tooltip" aria-hidden="true">Tooltip</span></span>
+      <input placeholder=" " aria-describedby="tooltip"/>
+      <span>Outlined Textfield with Tooltip</span>
+    </label>
+    <hr>
+
+      <!-- @FLATPICKER -->
+      <script>
+        flatpickr(document.getElementById("flatpickr-input"),{
+          dateFormat: 'd/m/Y',
+          locale: {
+            firstDayOfWeek: 1,
+            weekdays: {
+              shorthand: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'],
+              longhand: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+            },
+            months: {
+              shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dex'],
+              longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            },
+          },
+        })
+
+        const dataTable = new simpleDatatables.DataTable("#datatable", {
+          searchable: true,
+          fixedHeight: true
+        })
+      </script>
+  </body>
+</html>

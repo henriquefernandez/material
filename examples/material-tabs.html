@@ -24,52 +24,8 @@
     </style>
   </head>
   <body>
-    <!-- LAYOUT -->
-    <!-- The drawer is always open in large screens. The header is always shown,
-      even in small screens. -->
-      <div class="material-layout m-js-layout m-layout--fixed-drawer
-      m-layout--fixed-header">
-        <header class="material-layout__header m-shadow-2">
-          <div class="material-layout__header-row">
-            <span class="material-layout-title">Alert</span>
-            <div class="material-layout-spacer"></div>
-          </div>
-        </header>
-        <div class="material-layout__drawer m-shadow-2">
-          <span class="material-layout-title">Mate CSS</span>
-          <nav class="material-navigation m-no-padding-top">
-            <a class="material-navigation__link" href="material-alert.html">m-alert</a>
-            <a class="material-navigation__link" href="material-base.html">m-base</a>
-            <a class="material-navigation__link" href="material-button.html">m-button</a>
-            <a class="material-navigation__link" href="material-card.html">m-card</a>
-            <a class="material-navigation__link" href="material-chips.html">m-chips</a>
-            <a class="material-navigation__link" href="material-collapsible.html">m-collapsible</a>
-            <a class="material-navigation__link" href="material-colors.html">m-colors</a>
-            <a class="material-navigation__link" href="material-dashboard.html">m-dashboard</a>
-            <a class="material-navigation__link" href="material-footer.html">m-footer</a>
-            <a class="material-navigation__link" href="material-form.html">m-form</a>
-            <a class="material-navigation__link" href="material-grid.html">m-grid</a>
-            <a class="material-navigation__link" href="material-helpers.html">m-helpers</a>
-            <a class="material-navigation__link" href="material-layout.html">m-layout</a>
-            <a class="material-navigation__link" href="material-menu.html">m-menu</a>
-            <a class="material-navigation__link" href="material-modal.html">m-modal</a>
-            <a class="material-navigation__link" href="material-nav.html">m-nav</a>
-            <a class="material-navigation__link" href="material-normalize.html">m-normalize</a>
-            <a class="material-navigation__link" href="material-progress.html">m-progress</a>
-            <a class="material-navigation__link" href="material-shadow.html">m-shadow</a>
-            <a class="material-navigation__link" href="material-table.html">m-table</a>
-            <a class="material-navigation__link m-active" href="material-tabs.html">m-tabs</a>
-            <a class="material-navigation__link" href="material-thumbnail.html">m-thumbnail</a>
-            <a class="material-navigation__link" href="material-tooltip.html">m-tooltip</a>
-            <a class="material-navigation__link" href="material-typography.html">m-typography</a>
-          </nav>
-        </div>
-        <main class="material-layout__content m-padding" style="background-color: #dfdfdf;">
-          <!-- CONTENT -->
-          <div class="page-content m-shadow-1 m-padding" style="background-color: white;">
-
             <!-- TABS -->
-            <div class="material-tabs m-js-tabs">
+            <div class="material-tabs material-js-tabs">
               <div class="material-tabs__tab-bar">
                 <a href="#starks-panel" class="material-tabs__tab is-active">Tab 1</a>
                 <a href="#lannisters-panel" class="material-tabs__tab">Tab 2</a>
@@ -103,7 +59,7 @@
               </div>
             </div>
 
-            <div class="material-tabs m-js-tabs m-js-ripple-effect">
+            <div class="material-tabs material-js-tabs material-js-ripple-effect">
               <div class="material-tabs__tab-bar">
                 <a href="#starks-panel" class="material-tabs__tab is-active">Tab 1</a>
                 <a href="#lannisters-panel" class="material-tabs__tab">Tab 2</a>
@@ -137,7 +93,7 @@
               </div>
             </div>
 
-            <div class="material-tabs-no-js m-shadow-1">
+            <div class="material-tabs-no-js material-shadow-1">
               <div class="material-tab-no-js-relative-wrap">
                 <input type="radio" name="material-tabs-no-js" id="material-tab1" checked>
                 <div class="material-tab-no-js-label-content" id="material-tab1-content">
@@ -166,17 +122,5 @@
               </div>
             </div>
             <!-- TABS -->
-
-          </div>
-          <!-- CONTENT -->
-        </main>
-      </div>
-
-      <!-- @material JS -->
-      <script src="../material.js"></script>
-      <!-- LAYOUT -->
-      <script>
-        componentHandler.upgradeDom();
-      </script>
   </body>
 </html>

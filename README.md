@@ -1,2 +1,2 @@
 # Material
-Pure CSS material design styles
+Material design styles with pure CSS. 
